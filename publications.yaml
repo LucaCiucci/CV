@@ -1,0 +1,44 @@
+
+# TODO use parent field
+
+ZiSE25:
+  type: proceedings
+  title: "Zephyr: An Ideal Platform for Introducing the Software Development Processes of Safety-Critical Embedded Systems"
+  author: ["Roberto Bagnara", "Ayoub Bourjilat", "Luca Ciucci", "Roy Jamil", "Nicola Vetrini"]
+  date: 2025-09-24
+  url: "https://www.zephyr-sceduconf.org/zise2025"
+  #url: "https://www.bugseng.com/bugseng-at-zephyr-in-science-and-education/"
+  # TODO ... and fix url
+
+rust-scientific-computing-2025:
+  type: conference
+  title: "High-performance computing for quantum field theory: a case for Rust in Monte Carlo simulations"
+  author: ["Luca Ciucci", "Serena Bruzzesi"]
+  date: 2025-06-06
+  url: https://scientificcomputing.rs/2025/talks/ciucci.html
+
+bagnara2025crust:
+  type: proceedings
+  title: "C, Rust, C-rusted and MISRA for Safe and Secure Embedded Software"
+  author: ["Roberto Bagnara", "Nicola Vetrini", "Luca Ciucci", "Abramo Bagnara", "Federico Serafini"]
+  date: 2025-03
+  pages: 343-364
+  booktitle: "embedded world Conference 2025"
+  publisher: "WEKA FACHMEDIEN GmbH"
+  publisher-place: Nuremberg, Germany
+  isbn: "978-3-645-50203-0"
+  url: "https://hdl.handle.net/11381/3034341"
+
+misra_c_addendum_6_2025:
+  type: report
+  title: "MISRA C:2025 Addendum 6 - Review contributors (acknowledgement)"
+  author: ["The MISRA Consortium"]
+  date: 2025-03
+  url: "https://misra.org.uk/app/uploads/2025/03/MISRA-C-2025-ADD6.pdf"
+
+bm4s_t9_article:
+  type: article
+  title: A low-cost Cherenkov detector to be tested in CERN's T9 beam line
+  author: ["P. Francavilla", "M.R. Felici", "E. Cisbani", "L. Cameli", "A. Camilli", "V. Castelli", "F. Catalini", "S. Cipolletti", "F. Crescenzi", "N. Decembrini", "F. Fattenotte", "A. De Paolis", "W. Ghouzi", "F. Lottatori", "B. Lucidi", "N. Minnucci", "G.V. Pastanella", "M. Rastelli", "E. Salerno", "A. Vittori", "D. Zeppilli", "R. Barbieri", "D. Cartuccia", "L. Ciucci", "S. Giano", "L. Manardi", "S. Pierantozzi", "M. Ricci and A. Rongoni"]
+  url: https://doi.org/10.22323/1.314.0822
+  date: 2018-03-20
