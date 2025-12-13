@@ -75,9 +75,9 @@ interests:
     - languages:
       `Rust`,
       `C++` & `C` (and some popular build systems like `CMake`, `make`, `Visual Studio`),
-      //- `C++` (& `C`): advanced practical experience, I use `CMake` and `Visual Studio` as build systems
-      //- `Rust`: a recent adoption in my toolset, still learning but already developing real-life algorithms and a new GUI library
-      //- `Matlab`: used matlab since prior to my university studies, especially for data analysis and visualization
+      <!--- `C++` (& `C`): advanced practical experience, I use `CMake` and `Visual Studio` as build systems
+      - `Rust`: a recent adoption in my toolset, still learning but already developing real-life algorithms and a new GUI library
+      - `Matlab`: used matlab since prior to my university studies, especially for data analysis and visualization -->
       `Matlab`,
       `TypeScript` & `JavaScript`,
       `HTML` & `CSS`,
@@ -90,14 +90,14 @@ interests:
       `Java`,
       `Pascal`,
       `PIC Basic`
-    - systems: *Desktop*, *Microcontrollers*, *Embedded*
-    - technologies: *3D reconstruction*, *Quaternions*, *Differentials*, *Numerical Optimization*, *image processing*, *camera calibration*, *Neural Networks*, *GUI*
+    - systems: **Desktop**, **Microcontrollers**, **Embedded**
+    - technologies: **3D reconstruction**, **Quaternions**, **Differentials**, **Numerical Optimization**, **image processing**, **camera calibration**, **Neural Networks**, **GUI**
 - topic: Electronics
   description: |
     some very basic knowledge, worked mainly with prebuilt boards
 - topic: Mechanics
   description: |
-    many manual tools, *CNC machines* (+ *G-CODE* & *CAM*), *3D printing*
+    many manual tools, **CNC machines** (+ **G-CODE** & **CAM**), **3D printing**
 work_experiences:
 - at: BUGSENG s.r.l.
   position: Software Developer
@@ -105,10 +105,10 @@ work_experiences:
     start: 2024-09-02
     end: present
   description: |
-    Contributing to ECLAIR, BUGSENG's *static analysis* platform for C/C++ with a focus on MISRA and *safety-critical standards* (e.g., *MISRA C/C++*, *CERT*, *AUTOSAR*). Involved in the development of *core analysis components* and tooling primarily in `C++` and `Prolog`, scripting and automation in several languages, (e.g. `Python`, `Lua`), `Javascript` for gui frontends and websites, `Java` for *IDE plugins*.
+    Contributing to ECLAIR, BUGSENG's **static analysis** platform for C/C++ with a focus on MISRA and **safety-critical standards** (e.g., **MISRA C/C++**, **CERT**, **AUTOSAR**). Involved in the development of **core analysis components** and tooling primarily in `C++` and `Prolog`, scripting and automation in several languages, (e.g. `Python`, `Lua`), `Javascript` for gui frontends and websites, `Java` for **IDE plugins**.
     Involved in projects spanning various domains, in collaboration with cross-functional teams.
 
-    @ZiSE25 @bagnara2025crust @misra_c_addendum_6_2025
+    [@ZiSE25] [@bagnara2025crust] [@misra_c_addendum_6_2025]
 - at: Scanny3D
   position: Research and Development
   description: |
@@ -123,13 +123,13 @@ education:
     start: 17/9/2018
     end: present
   description: |
-    Stared my studies in physics course #link("https://www.unipi.it/index.php/lauree/corso/10441")[L-30]
+    Stared my studies in physics course [L-30](https://www.unipi.it/index.php/lauree/corso/10441)
 - title: University of Pisa
   time:
     start: 17/9/2018
     end: present
   description: |
-    Stared my studies in physics course #link("https://www.unipi.it/index.php/lauree/corso/10441")[L-30]
+    Stared my studies in physics course [L-30](https://www.unipi.it/index.php/lauree/corso/10441)
 - title: Ducati "Fisica in moto" summer school
   time:
     start: 17/7/2017
@@ -174,7 +174,7 @@ educational_projects:
     start: 6/6/2023
     end: null
   description: |
-    We created #link("https://github.com/bbf-project/body-tracking-web")[Body Tracking Web] and VDU posture monitor software to help people improve their posture while working at a video terminal. We won the competition and we are now working on the project to make it a real product.
+    We created [Body Tracking Web](https://github.com/bbf-project/body-tracking-web) and VDU posture monitor software to help people improve their posture while working at a video terminal. We won the competition and we are now working on the project to make it a real product.
   links:
   - https://github.com/bbf-project/body-tracking-web
 - title: "ASML Intergalactic Coding Challenge winner"
@@ -196,7 +196,7 @@ educational_projects:
   description: |
     Two week experience at CERN, performing tests on the beam of T9 beam facility with the proposed and built Cherenkov detector. I was particularly involved in the detector design, construction and testing, data analysis and electronics.
 
-    @bm4s_t9_article
+    [@bm4s_t9_article]
   links:
   - https://web.archive.org/web/20230128071752/http://www.tco-beamline.com/
   - https://beamline-for-schools.web.cern.ch/editions/2017-edition

@@ -1,5 +1,10 @@
 
 #import "lib.typ": *
+#import "@preview/cmarker:0.1.8"
+
+#let render(md) = {
+  cmarker.render(md)
+}
 
 #let cv-data = yaml("cv-LC.yaml")
 
@@ -8,14 +13,14 @@
 #show: cv-template.with(
   name: cv-data.name,
   position: cv-data.position,
-  description: eval(mode: "markup", cv-data.professional_summary),
+  description: render(cv-data.professional_summary),
   keywords: cv-data.keywords,
 )
 
 #side[
   = About me
 
-  #eval(mode: "markup", cv-data.professional_summary)
+  #render(cv-data.professional_summary)
 
   = Interests
 
@@ -86,7 +91,7 @@
   ..for interest in cv-data.interests {
     (list.item[
       *#interest.topic*#if "description" in interest {
-        [: #eval(mode: "markup", interest.description)]
+        [: #render(interest.description)]
       }
     ],)
   }
@@ -105,7 +110,7 @@
     }
   }
 
-  #eval(mode: "markup", entry.description)
+  #render(entry.description)
 ]
 
 = Publications & Contributions
@@ -180,7 +185,7 @@
       ])),
       [
         #text(size: 1em, weight: "bold", entry.title.trim())\
-        #eval(mode: "markup", entry.description.trim())
+        #render(entry.description.trim())
       ],
     )
   }
@@ -220,7 +225,7 @@
       ])),
       [
         #text(size: 1em, weight: "bold", project.title.trim())\
-        #eval(mode: "markup", project.description.trim())
+        #render(project.description.trim())
       ],
     )
   }
