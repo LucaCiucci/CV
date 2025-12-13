@@ -3,7 +3,7 @@ all: cv.pdf
 
 img: __subdir-img
 
-cv.pdf: cv.typ img
+cv.pdf: cv.typ cv-LC.yaml lib.typ bg-1.typ publications.yaml img
 	typst compile cv.typ
 
 clean:
