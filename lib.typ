@@ -64,6 +64,15 @@
 
   set page(
     margin: PAGE_MARGIN,
+    numbering: "1 / 1",
+    footer: align(center)[
+      #set text(fill: gray, size: 0.75em)
+      #context [#counter(page).display(both: true)]
+      \-
+      #full-name
+      \-
+      #datetime.today().display()
+    ]
   )
 
   show link: it => context {
