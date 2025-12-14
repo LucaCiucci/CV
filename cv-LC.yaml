@@ -45,17 +45,13 @@ info:
   website: https://lucaciucci.github.io
 socials:
 - platform: GitHub
-  username: lucaciucci
+  username: LucaCiucci
   fontawesome_icon: github
   link: https://github.com/LucaCiucci
 - platform: LinkedIn
   username: luca-ciucci-3b22991a0
   fontawesome_icon: linkedin
   link: https://www.linkedin.com/in/luca-ciucci-3b22991a0/ # TODO rename
-- platform: 𝕏
-  username: LucaCiucci99
-  fontawesome_icon: x-twitter
-  link: https://x.com/LucaCiucci99
 - platform: Telegram
   username: LucaCiucci
   fontawesome_icon: telegram
@@ -64,6 +60,11 @@ socials:
   username: '@LucaCiucci:matrix.org'
   # fontawesome_icon: matrix # TODO see https://github.com/FortAwesome/Font-Awesome/issues/12808
   link: https://matrix.to/#/@LucaCiucci:matrix.org
+- platform: 𝕏
+  username: LucaCiucci99
+  fontawesome_icon: x-twitter
+  link: https://x.com/LucaCiucci99
+# TODO Instagram? Facebook? Mastodon?
 #https://t.me/LucaCiucci https://matrix.to/#/
 professional_summary: 'TBW #lorem(30)'
   # I'm a software developer with a strong background in physics and a passion for problem-solving. I have experience in developing algorithms for 3D reconstruction, as well as working with electronics and mechanics. I'm always eager to learn new technologies and improve my skills.
@@ -170,11 +171,14 @@ education:
     Scientific high school diploma at applied sciences section, 100/100 score at "T.C.O. Fermo".
 educational_projects:
 - title: "\"Learning by doing\" competition winners"
+  image:
+    path: img/vdu-posture-monitor_r100.png
+    alt: VDU posture monitor
   time:
     start: 6/6/2023
     end: null
   description: |
-    We created [Body Tracking Web](https://github.com/bbf-project/body-tracking-web) and VDU posture monitor software to help people improve their posture while working at a video terminal. We won the competition and we are now working on the project to make it a real product.
+    We created [Body Tracking Web](https://github.com/bbf-project/body-tracking-web) and VDU posture monitor software to help people improve their posture while working at a video terminal. We won the competition organized by Confindustria Marche and we are now working on the project to make it a real product.
   links:
   - https://github.com/bbf-project/body-tracking-web
 - title: "ASML Intergalactic Coding Challenge winner"

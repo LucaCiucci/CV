@@ -7,7 +7,8 @@ ALL = \
 	ippog_r100.png \
 	me_r300.jpg \
 	pack-man_r100.png \
-	tco_r100.png
+	tco_r100.png \
+	vdu-posture-monitor_r100.png
 
 all: $(ALL) 
 

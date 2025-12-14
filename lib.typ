@@ -2,7 +2,7 @@
 #import "bg-1.typ": drawing as bg-graphic
 #import "@preview/fontawesome:0.6.0" as fa
 
-#let _st-theme = state("theme", (
+#let theme = state("theme", (
   //header-bg-color: rgb("#35414d").darken(30%),
   header-bg-color: rgb("#35414d"),
   //header-text-color: luma(220),
@@ -25,13 +25,13 @@
 )
 
 #let fa-icon(name, ..args) = context {
-  text(fill: _st-theme.final().accent-color, fa.fa-icon(name, ..args))
+  text(fill: theme.final().accent-color, fa.fa-icon(name, ..args))
 }
 
 #let with-left-icon(icon, body) = grid(
   columns: 2,
   gutter: 0.25em,
-  if icon != none { fa-icon(icon) } else { box() },
+  if icon != none { fa-icon(icon, size: 0.8em) } else { box() },
   body
 )
 
@@ -67,12 +67,12 @@
   )
 
   show link: it => context {
-    set text(fill: _st-theme.final().accent-color.darken(50%))
+    set text(fill: theme.final().accent-color.darken(50%))
     it
   }
 
   context {
-    let theme = _st-theme.final()
+    let theme = theme.final()
 
     block(
       fill: theme.header-bg-color,

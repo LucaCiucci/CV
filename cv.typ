@@ -1,6 +1,7 @@
 
 #import "lib.typ": *
 #import "@preview/cmarker:0.1.8"
+#import "@preview/cades:0.3.1": qr-code
 
 #let render(md) = {
   cmarker.render(md)
@@ -48,16 +49,25 @@
   }
   #if "emails" in cv-data.info {
     with-left-icon("envelope")[
-      #for email in cv-data.info.emails {
-        [#link("mailto:" + email, email)\ ]
+      #for (i, email) in cv-data.info.emails.enumerate() {
+        [#link("mailto:" + email, email) #if i == 0 { context text(theme.final().accent-color, sym.star.filled) } \ ]
       }
     ]
   }
+
+  #context align(center, link(cv-data.info.website, box(
+    inset: 0.5em,
+    radius: 0.75em,
+    //fill: fuchsia.lighten(70%),
+    stroke: 1pt + theme.final().accent-color,
+    qr-code(cv-data.info.website, color: theme.final().accent-color.darken(30%), background: white.transparentize(100%), width: 1.5cm)
+  )))
 
   #align(bottom)[
     //= Skills
     #if "socials" in cv-data [
       = Social Links
+      #set par(spacing: 0.5em)
       #for social in cv-data.socials {
         let content = social.username
         let content = if "link" in social {
@@ -159,7 +169,7 @@
   gutter: 0.5em,
   ..for entry in cv-data.education {
     (
-      table.cell(stroke: (right: 1pt + _st-theme.final().accent-color), align(right, text(size: 0.8em)[
+      table.cell(stroke: (right: 1pt + theme.final().accent-color), align(right, text(size: 0.8em)[
         #if "time" in entry {
           if entry.time.start != none and entry.time.end != none {
             [ (#entry.time.start \~ #entry.time.end) ]
@@ -199,7 +209,7 @@
   gutter: 0.5em,
   ..for project in cv-data.educational_projects {
     (
-      table.cell(stroke: (right: 1pt + _st-theme.final().accent-color), align(right, text(size: 0.8em)[
+      table.cell(stroke: (right: 1pt + theme.final().accent-color), align(right, text(size: 0.8em)[
         #if "time" in project {
           if project.time.start != none and project.time.end != none {
             [ (#project.time.start \~ #project.time.end) ]
