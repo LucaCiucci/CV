@@ -1,7 +1,7 @@
 
 #import "lib.typ": *
 #import "@preview/cmarker:0.1.8"
-#import "@preview/cades:0.3.1": qr-code
+#import "tiaoma-hacked.typ": qrcode
 
 #let render(md) = {
   cmarker.render(md)
@@ -55,15 +55,24 @@
     ]
   }
 
-  #context align(center, link(cv-data.info.website, box(
+  #align(bottom)[
+    #context align(center, link(cv-data.info.website, box(
     inset: 0.5em,
-    radius: 0.75em,
-    //fill: fuchsia.lighten(70%),
-    stroke: 1pt + theme.final().accent-color,
-    qr-code(cv-data.info.website, color: theme.final().accent-color.darken(30%), background: white.transparentize(100%), width: 1.5cm)
+    radius: 0.5em,
+    stroke: 2pt + theme.final().accent-color.transparentize(50%),
+    qrcode(
+      cv-data.info.website,
+      options: (
+        fg-color: gradient.linear(
+          angle: 45deg,
+          blue.darken(30%),
+          purple.darken(30%),
+        ),
+      ),
+      width: 2cm,
+    )
   )))
 
-  #align(bottom)[
     //= Skills
     #if "socials" in cv-data [
       = Social Links
