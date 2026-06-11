@@ -1,105 +1,112 @@
-
 #import "lib.typ": *
 #import "@preview/cmarker:0.1.8"
 #import "tiaoma-hacked.typ": qrcode
 
-#let render(md) = {
-  cmarker.render(md)
-}
+#let render(md) = cmarker.render(md)
+#let cv = yaml("cv-LC.yaml")
+#let name-parts = cv.name.split(" ")
+#let item-title(item) = if type(item) == str { item } else { item.title }
 
-#let cv-data = yaml("cv-LC.yaml")
-
-//#set text(font: "Roboto")
+#let timeline(entries) = context text(size: 0.9em, table(
+  columns: (1fr, 3fr),
+  stroke: none,
+  gutter: 0.5em,
+  ..for entry in entries {
+    (
+      table.cell(
+        stroke: (right: 1pt + theme.final().accent-color),
+        align(right, text(size: 0.8em)[
+          #entry.period
+          #if "image" in entry {
+            image(
+              "img/" + entry.image,
+              alt: entry.title,
+              width: 70%,
+              height: auto,
+              fit: "contain",
+            )
+          }
+        ]),
+      ),
+      [
+        #text(size: 1em, weight: "bold", entry.title.trim())\
+        #render(entry.description.trim())
+      ],
+    )
+  },
+))
 
 #show: cv-template.with(
-  name: cv-data.name,
-  position: cv-data.position,
-  description: render(cv-data.professional_summary),
-  keywords: cv-data.keywords,
+  name: (
+    first: name-parts.first(),
+    last: name-parts.slice(1).join(" "),
+  ),
+  position: (cv.role,),
+  description: cv.summary,
+  keywords: cv.keywords,
 )
 
 #side[
   = About me
 
-  #render(cv-data.professional_summary)
+  #render(cv.summary)
 
   = Interests
 
-  #for interest in cv-data.interests [
-    - #interest.topic
+  #for group in cv.interests.groups [
+    - #group.title
   ]
 
   = Contact Info
-  #if "website" in cv-data.info {
-    with-left-icon("globe", link(cv-data.info.website, cv-data.info.website))
-  }
-  #if "home_address" in cv-data.info {
-    let home_address = cv-data.info.home_address
-    let content = [
-      #home_address.street, #home_address.city, #home_address.province, #home_address.country
-    ]
-    with-left-icon("home", if "link" in home_address {
-      link(home_address.link, content)
-    } else {
-      content
-    })
-  }
-  #if "phone" in cv-data.info {
-    with-left-icon("phone", link("tel:" + cv-data.info.phone.replace(" ", ""), cv-data.info.phone))
-  }
-  #if "emails" in cv-data.info {
-    with-left-icon("envelope")[
-      #for (i, email) in cv-data.info.emails.enumerate() {
-        [#link("mailto:" + email, email) #if i == 0 { context text(theme.final().accent-color, sym.star.filled) } \ ]
-      }
-    ]
-  }
 
-  #align(bottom)[
-    #context align(center, link(cv-data.info.website, box(
-    inset: 0.5em,
-    radius: 0.5em,
-    stroke: 2pt + theme.final().accent-color.transparentize(50%),
-    qrcode(
-      cv-data.info.website,
-      options: (
-        fg-color: gradient.linear(
-          angle: 45deg,
-          blue.darken(30%),
-          purple.darken(30%),
-        ),
-      ),
-      width: 2cm,
-    )
-  )))
-
-    //= Skills
-    #if "socials" in cv-data [
-      = Social Links
-      #set par(spacing: 0.5em)
-      #for social in cv-data.socials {
-        let content = social.username
-        let content = if "link" in social {
-          link(social.link, content)
-        } else {
-          content
-        }
-        with-left-icon(social.at("fontawesome_icon", default: none), content)
-      }
+  #with-left-icon("globe", link(cv.info.website, cv.info.website))
+  #let address = cv.info.home_address
+  #with-left-icon("home", link(address.link)[
+    #address.street, #address.number, #address.city, #address.province, #address.country
+  ])
+  #with-left-icon("phone", link("tel:" + cv.info.phone.replace(" ", ""), cv.info.phone))
+  #with-left-icon("envelope")[
+    #for (i, email) in cv.info.mails.enumerate() [
+      #link("mailto:" + email, email)#if i == 0 { context text(theme.final().accent-color, sym.star.filled) }\
     ]
   ]
 
-  #colbreak()
-  foo
+  #align(bottom)[
+    #context align(center, link(cv.info.website, box(
+      inset: 0.5em,
+      radius: 0.5em,
+      stroke: 2pt + theme.final().accent-color.transparentize(50%),
+      qrcode(
+        cv.info.website,
+        options: (
+          fg-color: gradient.linear(
+            angle: 45deg,
+            blue.darken(30%),
+            purple.darken(30%),
+          ),
+        ),
+        width: 2cm,
+      ),
+    )))
+
+    = Social Links
+
+    #set par(spacing: 0.5em)
+    #for social in cv.socials {
+      with-left-icon(
+        social.at("icon", default: none),
+        link(social.link, social.username),
+      )
+    }
+  ]
 ]
 
 #place(bottom, hide([#for entry in yaml("publications.yaml").keys() {
   ref(label(entry))
 }]))
 
-// WTF? See https://forum.typst.app/t/whats-the-equivalent-of-ms-words-1-5-line-spacing/1057
-#let leading = 1.5em * 0.9
-#let leading = leading - 0.75em // "Normalization"
+// Compact spacing keeps the printable CV within a few pages.
+#let leading = 1.5em * 0.9 - 0.75em
 #set block(spacing: leading)
 #set par(spacing: leading)
 #set par(leading: leading)
@@ -107,27 +114,22 @@
 = Main Interests
 
 #list(
-  ..for interest in cv-data.interests {
+  ..for group in cv.interests.groups {
     (list.item[
-      *#interest.topic*#if "description" in interest {
-        [: #render(interest.description)]
-      }
+      *#group.title*: #render(group.description)
+      #if "items" in group [
+        #group.items.map(item-title).join(", ")
+      ]
     ],)
-  }
+  },
 )
 
 = Work Experience
 
-#for entry in cv-data.work_experiences [
-  == #entry.position \@ #entry.at #if "time" in entry {
-    if entry.time.start != none and entry.time.end != none {
-      [ (#entry.time.start \~ #entry.time.end) ]
-    } else if entry.time.start != none {
-      [ (since #entry.time.start) ]
-    } else if entry.time.end != none {
-      [ (until #entry.time.end) ]
-    }
-  }
+#for entry in cv.work_experience [
+  == #entry.role \@ #entry.company #if "period" in entry [
+    (#entry.period.from \~ #entry.period.to)
+  ]
 
   #render(entry.description)
 ]
@@ -136,116 +138,10 @@
 
 #bibliography("publications.yaml", full: true, title: none)
 
-/*
-#enum(numbering: "[1]", ..{
-    for (k, v) in yaml("publications.yaml") {
-        let authors = if v.author.len() == 1 {
-            v.author.at(0)
-        } else if v.author.len() == 2 {
-            v.author.at(0) + " and " + v.author.at(1)
-        } else {
-            //v.author.slice(0, v.author.len() - 1).join(", ") + ", and " + v.author.at(v.author.len() - 1)
-            let first = v.author.at(0);
-            [#first _et al._]
-        }
-        let date = if "date" in v {
-            let date = v.date.split("-"); // YYYY-MM-DD
-            if date.len() == 3 {
-                datetime(year: int(date.at(0)), month: int(date.at(1)), day: int(date.at(2))).display()
-            } else if date.len() == 2 {
-                datetime(year: int(date.at(0)), month: int(date.at(1)), day: 1).display()
-            } else {
-                panic("invalid date format")
-            }
-        } else {
-            []
-        }
-        let url = if "url" in v {
-            [\[Online\]. Available: #link(v.url)[#v.url]]
-        } else {
-            []
-        }
-        (enum.item[#authors: _#(v.title)_. #date #url],)
-    }
-})
-*/
-
 = Education
 
-#context table(
-  columns: (1fr, 3fr),
-  stroke: none,
-  gutter: 0.5em,
-  ..for entry in cv-data.education {
-    (
-      table.cell(stroke: (right: 1pt + theme.final().accent-color), align(right, text(size: 0.8em)[
-        #if "time" in entry {
-          if entry.time.start != none and entry.time.end != none {
-            [ (#entry.time.start \~ #entry.time.end) ]
-          } else if entry.time.start != none {
-            [ (since #entry.time.start) ]
-          } else if entry.time.end != none {
-            [ (until #entry.time.end) ]
-          }
-        } else {
-          []
-        }
-        #if "image" in entry {
-          image(
-            entry.image.path,
-            alt: entry.image.at("alt", default: ""),
-            width: 80%,
-            height: auto,
-            fit: "contain",
-          )
-        } else {
-          []
-        }
-      ])),
-      [
-        #text(size: 1em, weight: "bold", entry.title.trim())\
-        #render(entry.description.trim())
-      ],
-    )
-  }
-)
+#timeline(cv.education)
 
 == Educational projects
 
-#context table(
-  columns: (1fr, 3fr),
-  stroke: none,
-  gutter: 0.5em,
-  ..for project in cv-data.educational_projects {
-    (
-      table.cell(stroke: (right: 1pt + theme.final().accent-color), align(right, text(size: 0.8em)[
-        #if "time" in project {
-          if project.time.start != none and project.time.end != none {
-            [ (#project.time.start \~ #project.time.end) ]
-          } else if project.time.start != none {
-            [ (since #project.time.start) ]
-          } else if project.time.end != none {
-            [ (until #project.time.end) ]
-          }
-        } else {
-          []
-        }
-        #if "image" in project {
-          image(
-            project.image.path,
-            alt: project.image.at("alt", default: ""),
-            width: 80%,
-            height: auto,
-            fit: "contain",
-          )
-        } else {
-          []
-        }
-      ])),
-      [
-        #text(size: 1em, weight: "bold", project.title.trim())\
-        #render(project.description.trim())
-      ],
-    )
-  }
-)
+#timeline(cv.educational_projects)

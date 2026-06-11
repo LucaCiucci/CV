@@ -1,234 +1,183 @@
-name:
-  first: Luca
-  last: Ciucci
-position:
-- Software Developer
-- Physics Student
-image: me_r.jpg
+name: Luca Ciucci
+role: Software developer & R&D engineer
+summary: I develop software for complex technical domains, spanning static analysis, scientific computing, 3D reconstruction, and systems programming.
+portrait: me_r300.jpg
 keywords:
-- Software Developer
-- Physics
-- Embedded Systems
-- Safety-Critical Systems
-- Static Analysis
+- Software development
+- Embedded systems
+- Safety-critical systems
+- Static analysis
 - MISRA
 - Rust
-- C/C++
 - C++
-- C
-- Theoretical Physics
-- Quantum Mechanics
-- General Relativity
-- Quantum Field Theory
-- Statistical Mechanics
+- Scientific computing
+- Physics
+
 info:
   home_address:
+    country: Italy
+    province: Pisa
     city: Pisa
-    province: PI
-    country: Italy
-    postal_code: 56124
-    street: via Lucchese, 57
+    postal_code: 56123
+    street: via Lucchese
+    number: 57
     link: https://maps.app.goo.gl/GbPGL3wMfKo2Hs9e9
-  residence_address:
-    city: Torre San Patrizio
-    province: FM
+  residence:
     country: Italy
+    province: FM
+    city: Torre San Patrizio
     postal_code: 63814
-    street: via Colle da Sole, 37
+    street: via Colle da Sole
+    number: 37
     link: https://goo.gl/maps/szUPzgGoyFhpd5kN7
-  phone: +39 333 410 9273
-  emails:
+  phone: +39 324 550 9174
+  mails:
   - luca.ciucci99@gmail.com
   - luca@scanny3d.com
   - luca.ciucci@bugseng.com
   - luca@lucaciucci99.com
   website: https://lucaciucci.github.io
+
 socials:
 - platform: GitHub
   username: LucaCiucci
-  fontawesome_icon: github
+  icon: github
   link: https://github.com/LucaCiucci
 - platform: LinkedIn
   username: luca-ciucci-3b22991a0
-  fontawesome_icon: linkedin
-  link: https://www.linkedin.com/in/luca-ciucci-3b22991a0/ # TODO rename
+  icon: linkedin
+  link: https://www.linkedin.com/in/luca-ciucci-3b22991a0/
 - platform: Telegram
   username: LucaCiucci
-  fontawesome_icon: telegram
+  icon: telegram
   link: https://t.me/LucaCiucci
 - platform: Matrix
   username: '@LucaCiucci:matrix.org'
-  # fontawesome_icon: matrix # TODO see https://github.com/FortAwesome/Font-Awesome/issues/12808
   link: https://matrix.to/#/@LucaCiucci:matrix.org
 - platform: 𝕏
   username: LucaCiucci99
-  fontawesome_icon: x-twitter
+  icon: x-twitter
   link: https://x.com/LucaCiucci99
-# TODO Instagram? Facebook? Mastodon?
-#https://t.me/LucaCiucci https://matrix.to/#/
-professional_summary: 'TBW #lorem(30)'
-  # I'm a software developer with a strong background in physics and a passion for problem-solving. I have experience in developing algorithms for 3D reconstruction, as well as working with electronics and mechanics. I'm always eager to learn new technologies and improve my skills.
+
 interests:
-- topic: Physics
-- topic: Math
-- topic: Programming
-  description: |
-    - languages:
-      `Rust`,
-      `C++` & `C` (and some popular build systems like `CMake`, `make`, `Visual Studio`),
-      <!--- `C++` (& `C`): advanced practical experience, I use `CMake` and `Visual Studio` as build systems
-      - `Rust`: a recent adoption in my toolset, still learning but already developing real-life algorithms and a new GUI library
-      - `Matlab`: used matlab since prior to my university studies, especially for data analysis and visualization -->
-      `Matlab`,
-      `TypeScript` & `JavaScript`,
-      `HTML` & `CSS`,
-      `Typst`,
-      `Python`,
-      `prolog`,
-      `Fortran`,
-      `LabView`,
-      `LaTex`,
-      `Java`,
-      `Pascal`,
-      `PIC Basic`
-    - systems: **Desktop**, **Microcontrollers**, **Embedded**
-    - technologies: **3D reconstruction**, **Quaternions**, **Differentials**, **Numerical Optimization**, **image processing**, **camera calibration**, **Neural Networks**, **GUI**
-- topic: Electronics
-  description: |
-    some very basic knowledge, worked mainly with prebuilt boards
-- topic: Mechanics
-  description: |
-    many manual tools, **CNC machines** (+ **G-CODE** & **CAM**), **3D printing**
-work_experiences:
-- at: BUGSENG s.r.l.
-  position: Software Developer
-  time:
-    start: 2024-09-02
-    end: present
-  description: |
-    Contributing to ECLAIR, BUGSENG's **static analysis** platform for C/C++ with a focus on MISRA and **safety-critical standards** (e.g., **MISRA C/C++**, **CERT**, **AUTOSAR**). Involved in the development of **core analysis components** and tooling primarily in `C++` and `Prolog`, scripting and automation in several languages, (e.g. `Python`, `Lua`), `Javascript` for gui frontends and websites, `Java` for **IDE plugins**.
-    Involved in projects spanning various domains, in collaboration with cross-functional teams.
+  intro: A practical mix of science, software, and hands-on engineering.
+  groups:
+  - title: Core interests
+    description: The scientific foundations behind how I approach engineering problems.
+    items:
+    - Physics
+    - Mathematics
+    - Programming
+  - title: Languages & tools
+    description: A broad toolkit, with current emphasis on systems and scientific software.
+    items:
+    - Rust
+    - title: C++ & C
+      desc: and build systems including CMake, Make, and Visual Studio
+    - Matlab
+    - TypeScript & JavaScript
+    - HTML & CSS
+    - Typst
+    - Python
+    - title: Prolog
+      desc: and logic programming in general
+    - Fortran
+    - LabView
+    - LaTeX
+    - Java
+    - Pascal
+    - PIC Basic
+  - title: Systems
+    description: Software close to the machine, from desktop applications to constrained devices.
+    items:
+    - Desktop
+    - Microcontrollers
+    - Embedded
+  - title: Technical domains
+    description: Applied numerical methods and geometry for real-world measurement systems.
+    items:
+    - '[3D reconstruction](https://scanny3d.com)'
+    - Quaternions
+    - Differentials
+    - title: Numerical optimization
+      children:
+      - Image processing
+      - Camera calibration
+      - Neural networks
+      - GUI
+  - title: Electronics
+    description: Some basic knowledge, working mainly with prebuilt boards.
+  - title: Mechanics
+    description: Many manual tools, CNC machines, `G-code` and `CAM`, 3D printing.
 
-    [@ZiSE25] [@bagnara2025crust] [@misra_c_addendum_6_2025]
-- at: Scanny3D s.r.l.
-  position: Research and Development
+work_experience:
+- role: Software Developer
+  company: BUGSENG s.r.l.
+  period:
+    from: 2024-09-02
+    to: present
+  location: Pisa, Italy
+  short_description: Static analysis and developer tooling for safety-critical C and C++.
   description: |
-    - software developer
-    - algorithm developer, mainly for 3D reconstruction
-    - electronics and mechanics experience
-    - 3D printing experience
-publications: publications.yaml
+    Contributing to ECLAIR, BUGSENG's **static analysis** platform for C/C++, with a focus on MISRA and **safety-critical standards** such as **MISRA C/C++**, **CERT**, and **AUTOSAR**.
+
+    Involved in core analysis components and tooling, primarily in `C++` and `Prolog`; scripting and automation in languages including `Python` and `Lua`; JavaScript frontends and websites; and `Java` IDE plugins. The work spans several domains and cross-functional teams.
+- role: Research and Development
+  company: Scanny3D s.r.l.
+  short_description: Software and algorithm development for 3D reconstruction.
+  description: |
+    Software and algorithm development, mainly for 3D reconstruction, together with practical electronics, mechanics, and 3D-printing work.
+
 education:
-- title: University of Pisa
-  time:
-    start: 17/9/2018
-    end: present
-  description: |
-    Stared my studies in physics course [L-30](https://www.unipi.it/index.php/lauree/corso/10441)
-- title: University of Pisa
-  time:
-    start: 17/9/2018
-    end: present
-  description: |
-    Stared my studies in physics course [L-30](https://www.unipi.it/index.php/lauree/corso/10441)
-- title: Ducati "Fisica in moto" summer school
-  time:
-    start: 17/7/2017
-    end: 21/7/2017
-  description: |
-    Attended some lesson on mechanics, physics laboratory, motorbikes mechanical development, production, data analysis and cooperative problem solving.
-- title: |
-    Modern Physics for students" summer school
-  start: 26/6/2017
-  time:
-    start: null
-    end: 1/7/2017
-  description: |
-    Attended some physics courses with particular emphases on both classical and modern physics introduction. Laboratory experiences on measurements and computing.
-- title: IPPOG International masterclass 2017
-  image:
-    path: img/ippog_r100.png
-    alt: IPPOG
-  time:
-    start: xx/3/2017
-    end: xx/3/2017
-  description: |
-    Attended some courses on high energy particle accelerator physics at the LNF INFN laboratories. Particularly interested on accelerating technologies and tracing detectors.
-- title: Cambridge English First Certificate
-  time:
-    start: null
-    end: 4/6/2018
-  description: |
-    English level B2.
-- title: Scientific high school diploma
-  image:
-    path: img/tco_r100.png
-    alt: T.C.O. Fermo
-  time:
-    start: 2013
-    end: 2018
-  description: |
-    Scientific high school diploma at applied sciences section, 100/100 score at "T.C.O. Fermo".
-educational_projects:
-- title: "\"Learning by doing\" competition winners"
-  image:
-    path: img/vdu-posture-monitor_r100.png
-    alt: VDU posture monitor
-  time:
-    start: 6/6/2023
-    end: null
-  description: |
-    We created [Body Tracking Web](https://github.com/bbf-project/body-tracking-web) and VDU posture monitor software to help people improve their posture while working at a video terminal. We won the competition organized by Confindustria Marche and we are now working on the project to make it a real product.
-  links:
-  - https://github.com/bbf-project/body-tracking-web
-- title: "ASML Intergalactic Coding Challenge winner"
-  image:
-    path: img/asml_r100.png
-    alt: ASML
-  time:
-    start: 17/12/2019
-    end: null
-  description: |
-    I was a Winner of the ASML Intergalactic Coding Challenge 2019.
-- title: "CERN's days as BL4S winners"
-  image:
-    path: img/beamline-cern_r100.png
-    alt: beamline-cern
-  time:
-    start: 20/9/2017
-    end: 2/10/2017
-  description: |
-    Two week experience at CERN, performing tests on the beam of T9 beam facility with the proposed and built Cherenkov detector. I was particularly involved in the detector design, construction and testing, data analysis and electronics.
+- period: 17/9/2018 - present
+  title: University of Pisa
+  description: Started my studies in physics course [L-30](https://www.unipi.it/index.php/lauree/corso/10441).
+- period: 17/7/2017 - 21/7/2017
+  title: Ducati "Fisica in moto" summer school
+  description: Attended lessons on mechanics, physics laboratory, motorbike mechanical development, production, data analysis, and cooperative problem solving.
+- period: 26/6/2017 - 1/7/2017
+  title: '"Modern Physics for students" summer school'
+  description: Attended physics courses with particular emphasis on introductions to classical and modern physics, with laboratory experiences in measurement and computing.
+- period: March 2017
+  title: IPPOG International masterclass 2017
+  image: ippog_r100.png
+  description: Attended courses on high-energy particle accelerator physics at the LNF INFN laboratories, with particular interest in accelerator technologies and tracking detectors.
+- period: 4/6/2018
+  title: Cambridge English First Certificate
+  description: English level B2.
+- period: 2013 - 2018
+  title: Scientific high school diploma
+  image: tco_r100.png
+  description: Scientific high school diploma, applied sciences section, with a 100/100 score at T.C.O. Fermo.
 
-    [@bm4s_t9_article]
-  links:
-  - https://web.archive.org/web/20230128071752/http://www.tco-beamline.com/
-  - https://beamline-for-schools.web.cern.ch/editions/2017-edition
-  - https://web.archive.org/web/20210613061858/https://home.infn.it/it/%C2%ADit/comunicazione/com%C2%ADunicati-stampa/2336-%C2%ADbeamline-for-schools%C2%AD-studenti-di-fermo-c%C2%ADampioni-del-mondo
-- title: "LNF (INFN)"
-  image:
-    path: img/beamline_r100.png
-    alt: beamline
-  time:
-    start: 22/9/2016
-    end: null
+educational_projects:
+- period: 6/6/2023
+  title: '"Learning by doing" competition winners'
+  image: vdu-posture-monitor_r100.png
   description: |
-    Performed some experiments with the Cherenkov detector of the 2016 BL4S proposal on one of the Frascati INFN's LINAC's beam (BTF).
-- title: "Olimpiadi della robotica"
-  image:
-    path: img/pack-man_r100.png
-    alt: pack-man
-  time:
-    start: 2017
-    end: null
+    We created [Body Tracking Web](https://github.com/bbf-project/body-tracking-web) and the _VDU posture monitor_ to help people improve their posture while working at a video terminal. We won the competition organized by Confindustria Marche and continued developing the project toward a real product.
+- period: 17/12/2019
+  title: '"ASML Intergalactic Coding Challenge" winner'
+  image: asml_r100.png
+  description: Winner of the ASML Intergalactic Coding Challenge 2019.
+- period: 20/9/2017 - 2/10/2017
+  title: "CERN's days as BL4S winners"
+  image: beamline-cern_r100.png
   description: |
-    Participated with the "pac-man" project for which I built most of the robot and all the firmware.
-- title: "First BL4S proposal"
-  image:
-    path: img/bl4s-group_r100.png
-    alt: bl4s-group
-  time:
-    start: 2016
-    end: null
-  description: |
-    Participated in the first group of the school project of a Cherenkov effect detector proposal for the 2016 CERN BL4S competition.
+    Two-week experience at CERN, performing tests on the T9 beam facility with our proposed and built Cherenkov detector. I was particularly involved in detector design, construction and testing, data analysis, and electronics.
+
+    - [Project website](https://web.archive.org/web/20230128071752/http://www.tco-beamline.com/)
+    - [Beamline for Schools 2017 edition](https://beamline-for-schools.web.cern.ch/editions/2017-edition)
+    - [INFN article](https://web.archive.org/web/20210613061858/https://home.infn.it/it/%C2%ADit/comunicazione/com%C2%ADunicati-stampa/2336-%C2%ADbeamline-for-schools%C2%AD-studenti-di-fermo-c%C2%ADampioni-del-mondo)
+- period: 22/9/2016
+  title: LNF (INFN)
+  image: beamline_r100.png
+  description: Performed experiments with the Cherenkov detector from the 2016 BL4S proposal on one of the Frascati INFN LINAC's beams at the BTF.
+- period: 2017
+  title: '"Olimpiadi della robotica"'
+  image: pack-man_r100.png
+  description: Participated with the "pac-man" project, for which I built most of the robot and all the firmware.
+- period: 2016
+  title: First BL4S proposal
+  image: bl4s-group_r100.png
+  description: Participated in the first group of the school project proposing a Cherenkov-effect detector for the 2016 CERN BL4S competition.
