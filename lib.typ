@@ -119,7 +119,7 @@
           //set text(font: "DejaVu Sans")
           set text(fill: theme.header-subtext-color, weight: "bold")
           set text(size: 1.125em)
-          rect(stroke: none, position.map(it => smallcaps(it)).join([ #sym.and ]))
+          rect(stroke: none, width: 75%, position.map(it => smallcaps(it)).join([ #sym.and ]))
           set text(size: 0.9em)
           //rect(stroke: none)[
           //  #emoji.phone.receiver #link("tel:" + cv-data.info.phone.replace(" ", ""), cv-data.info.phone)
