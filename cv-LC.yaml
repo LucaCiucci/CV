@@ -1,16 +1,19 @@
 name: Luca Ciucci
-role: Software developer & R&D engineer
-summary: I develop software for complex technical domains, spanning static analysis, scientific computing, 3D reconstruction, and systems programming.
+#role: Software developer & R&D
+role: Software developer focused on systems programming, static analysis and scientific software
+summary: I work on software for technically demanding domains, combining experience in C/C++ tooling, static analysis, scientific computing, 3D reconstruction, and low-level systems development.
 portrait: me_r300.jpg
+
 keywords:
 - Software development
-- Embedded systems
-- Safety-critical systems
 - Static analysis
-- MISRA
-- Rust
+- Safety-critical software
 - C++
+- Rust
 - Scientific computing
+- 3D reconstruction
+- Embedded systems
+- Developer tooling
 - Physics
 
 info:
@@ -63,52 +66,71 @@ interests:
   intro: A practical mix of science, software, and hands-on engineering.
   groups:
   - title: Core interests
-    description: The scientific foundations behind how I approach engineering problems.
+    description: Scientific and technical foundations that shape how I approach engineering problems.
     items:
     - Physics
     - Mathematics
     - Programming
+    - Scientific computing
+    - Software architecture
+
   - title: Languages & tools
-    description: A broad toolkit, with current emphasis on systems and scientific software.
+    description: A broad toolkit, with current emphasis on systems, static analysis, and scientific software.
     items:
-    - Rust
+    - title: Rust
+      desc: systems programming, GUI applications, numerical experiments, and tool prototypes
     - title: C++ & C
-      desc: and build systems including CMake, Make, and Visual Studio
-    - Matlab
-    - TypeScript & JavaScript
-    - HTML & CSS
-    - Typst
-    - Python
+      desc: core software development, low-level programming, tooling, and legacy codebases
     - title: Prolog
-      desc: and logic programming in general
+      desc: logic programming and rule-based analysis
+    - title: Python
+      desc: scripting, automation, experiments, and small tools
+    - title: TypeScript & JavaScript
+      desc: websites, interfaces, and developer-facing tools
+    - title: Matlab
+      desc: numerical prototyping and scientific computing
+    - title: LaTeX & Typst
+      desc: technical writing, documents, and reproducible presentation material
+    - title: Build systems
+      desc: CMake, Make, Cargo, and project automation
+    - title: Lua
+      desc: scripting for automation and tooling contexts
     - Fortran
-    - LabView
-    - LaTeX
-    - Java
+    - title: Java
+      desc: apps, integrations and tooling
+    - HTML & CSS
+    - LabVIEW
     - Pascal
     - PIC Basic
+
   - title: Systems
     description: Software close to the machine, from desktop applications to constrained devices.
     items:
-    - Desktop
+    - Desktop applications
     - Microcontrollers
-    - Embedded
+    - Embedded systems
+    - Inter-process communication
+    - Developer tooling
+
   - title: Technical domains
-    description: Applied numerical methods and geometry for real-world measurement systems.
+    description: Applied numerical methods, geometry, and software engineering for real-world measurement systems.
     items:
-    - '[3D reconstruction](https://scanny3d.com)'
+    - 3D reconstruction
+    - Structured light scanning
+    - Computer vision
+    - Image processing
+    - Camera calibration
     - Quaternions
     - Differentials
-    - title: Numerical optimization
-      children:
-      - Image processing
-      - Camera calibration
-      - Neural networks
-      - GUI
+    - Numerical optimization
+    - Neural networks
+    - GUI development
+
   - title: Electronics
-    description: Some basic knowledge, working mainly with prebuilt boards.
+    description: Basic practical knowledge, mainly working with prebuilt boards, sensors, cameras, and embedded components.
+
   - title: Mechanics
-    description: Many manual tools, CNC machines, `G-code` and `CAM`, 3D printing.
+    description: Practical experience with manual tools, CNC machines, `G-code`, `CAM`, and 3D printing.
 
 work_experience:
 - role: Software Developer
@@ -117,67 +139,160 @@ work_experience:
     from: 2024-09-02
     to: present
   location: Pisa, Italy
-  short_description: Static analysis and developer tooling for safety-critical C and C++.
+  short_description: Static analysis and developer tooling for safety-critical C and C++ software.
   description: |
-    Contributing to ECLAIR, BUGSENG's **static analysis** platform for C/C++, with a focus on MISRA and **safety-critical standards** such as **MISRA C/C++**, **CERT**, and **AUTOSAR**.
+    I contribute to ECLAIR, BUGSENG's static analysis platform for C and C++ software, used in contexts where correctness, maintainability, and compliance with safety-critical coding standards are important.
 
-    Involved in core analysis components and tooling, primarily in `C++` and `Prolog`; scripting and automation in languages including `Python` and `Lua`; JavaScript frontends and websites; and `Java` IDE plugins. The work spans several domains and cross-functional teams.
+    My work involves analysis-related development, developer tooling, automation, and integration tasks across a mixed technology stack. The main focus is on C/C++ static analysis and support for coding standards such as MISRA, AUTOSAR, and CERT, while also contributing to surrounding tools, scripts, interfaces, integrations, development workflows and web components.
+  main_technologies:
+  - title: C & C++
+    desc: Core development for static analysis tooling and C/C++-oriented infrastructure.
+    long_description: |
+      C & C++ are central to my work on static-analysis-related tooling and infrastructure. They are also the main target languages of the analysis itself, especially in the context of safety-critical coding standards and large industrial codebases.
+
+  - title: Prolog
+    desc: Logic programming for expressing rules, constraints, and analysis knowledge.
+    long_description: |
+      Prolog is useful for representing declarative relationships, rules, and constraints. In a static analysis context, this style is valuable because many checks can be naturally described in terms of facts, relations, and logical conditions.
+
+  - title: Static analysis
+    desc: Analysis of source code to detect defects, enforce rules, and support compliance.
+    long_description: |
+      Static analysis is the main technical domain of my current professional work. It combines programming language knowledge, software engineering, formal reasoning, and practical tooling to inspect programs without executing them.
+
+  - title: Safety-critical standards
+    desc: MISRA, CERT, AUTOSAR, and related rule-based software quality requirements.
+    long_description: |
+      Safety-critical coding standards define restrictions and guidelines intended to improve reliability, portability, maintainability, and analyzability of software. My work is connected to tooling that supports these standards for C and C++ projects.
+
+  - title: Python
+    desc: Scripting, automation, data processing, and small development tools.
+    long_description: |
+      Python is useful for automation, glue code, experiments, data processing, and small internal tools around larger software systems.
+
+  - title: Lua
+    desc: Scripting and automation in tooling contexts.
+    long_description: |
+      Lua is a lightweight scripting language that can be useful in tooling, configuration, and automation contexts. It is used in specific tools where embedding a small scripting engine and a reduced runtime requirements is beneficial for flexibility and extensibility.
+
+  - title: JavaScript
+    desc: Frontend and web-related development around developer tools.
+    long_description: |
+      JavaScript and related web technologies are useful for building interfaces, documentation, dashboards, and developer-facing tools.
+
+  - title: Java
+    desc: IDE-related tooling and integration work.
+    long_description: |
+      Java is relevant for tooling and integration work, especially in contexts involving IDE plugins and development environments. I only occasionally work with Java in this context, but it is part of the technology stack for certain integrations.
+
+  - title: Docker
+    desc: Containerization and deployment.
+    long_description: |
+      Docker is used to create reproducible environments, CI/CD pipelines, and other deployment workflows.
+
+  additional_technologies:
+  - MISRA C
+  - MISRA C++
+  - CERT C
+  - CERT C++
+  - AUTOSAR C++14
+  - Developer tooling
+  - Automation
+  - IDE integration
+  - Web interfaces
+  - Technical documentation
+
 - role: Research and Development
   company: Scanny3D s.r.l.
   short_description: Software and algorithm development for 3D reconstruction.
   description: |
-    Software and algorithm development, mainly for 3D reconstruction, together with practical electronics, mechanics, and 3D-printing work.
+    Worked on software and algorithms for 3D scanning & reconstruction, combining programming with practical work on cameras, projectors, electronics, mechanics, calibration, and 3D printing.
+
+    The work involved both experimental prototyping and practical engineering, from acquisition workflows and reconstruction algorithms to hardware integration.
+  main_technologies:
+  - title: C++
+    desc: Application and algorithm development for core algorithms and application logic, including some legacy codebases.
+  - 3D reconstruction
+  - title: Computer vision
+    desc: Image processing and measurement-oriented vision algorithms.
+  - title: Hardware integration
+    desc: Practical work with electronics, cameras, projectors, mechanics, and 3D printing.
 
 education:
-- period: 17/9/2018 - present
+#- period: 17/09/2018 - present
+- period: 2018 - present
   title: University of Pisa
-  description: Started my studies in physics course [L-30](https://www.unipi.it/index.php/lauree/corso/10441).
+  description: |
+    Physics studies at the University of Pisa, with current focus on theoretical physics, quantum field theory, lattice field theory, numerical methods, and scientific computing.
+
 - period: 17/7/2017 - 21/7/2017
   title: Ducati "Fisica in moto" summer school
-  description: Attended lessons on mechanics, physics laboratory, motorbike mechanical development, production, data analysis, and cooperative problem solving.
+  description: |
+    Attended lessons on mechanics, physics laboratory, motorbike mechanical development, production, data analysis, and cooperative problem solving.
+
 - period: 26/6/2017 - 1/7/2017
   title: '"Modern Physics for students" summer school'
-  description: Attended physics courses with particular emphasis on introductions to classical and modern physics, with laboratory experiences in measurement and computing.
+  description: |
+    Attended physics courses with emphasis on classical and modern physics, including laboratory experiences in measurement and computing.
+
 - period: March 2017
-  title: IPPOG International masterclass 2017
+  title: IPPOG International Masterclass 2017
   image: ippog_r100.png
-  description: Attended courses on high-energy particle accelerator physics at the LNF INFN laboratories, with particular interest in accelerator technologies and tracking detectors.
+  description: |
+    Attended courses on high-energy particle accelerator physics at the LNF INFN laboratories, with particular interest in accelerator technologies and tracking detectors.
+
 - period: 4/6/2018
   title: Cambridge English First Certificate
   description: English level B2.
+
 - period: 2013 - 2018
   title: Scientific high school diploma
   image: tco_r100.png
-  description: Scientific high school diploma, applied sciences section, with a 100/100 score at T.C.O. Fermo.
+  description: |
+    Scientific high school diploma, applied sciences section, with a 100/100 score at T.C.O. Fermo.
 
 educational_projects:
 - period: 6/6/2023
   title: '"Learning by doing" competition winners'
   image: vdu-posture-monitor_r100.png
   description: |
-    We created [Body Tracking Web](https://github.com/bbf-project/body-tracking-web) and the _VDU posture monitor_ to help people improve their posture while working at a video terminal. We won the competition organized by Confindustria Marche and continued developing the project toward a real product.
+    Built [Body Tracking Web](https://github.com/bbf-project/body-tracking-web) and the _VDU posture monitor_, a prototype system designed to help people improve their posture while working at a video terminal.
+
+    The project won the competition organized by Confindustria Marche and continued toward product-oriented development.
+
 - period: 17/12/2019
   title: '"ASML Intergalactic Coding Challenge" winner'
   image: asml_r100.png
-  description: Winner of the ASML Intergalactic Coding Challenge 2019.
+  description: |
+    Winner of the ASML Intergalactic Coding Challenge 2019.
+
 - period: 20/9/2017 - 2/10/2017
-  title: "CERN's days as BL4S winners"
+  #title: "CERN's days as BL4S winners"
+  title: Beamline for Schools winners, CERN test beam experience
   image: beamline-cern_r100.png
   description: |
-    Two-week experience at CERN, performing tests on the T9 beam facility with our proposed and built Cherenkov detector. I was particularly involved in detector design, construction and testing, data analysis, and electronics.
+    Two-week experience at CERN after winning the Beamline for Schools competition. We performed tests on the T9 beam facility with a Cherenkov detector proposed and built by our school team.
+
+    I was particularly involved in detector design, construction and testing, data analysis, and electronics.
 
     - [Project website](https://web.archive.org/web/20230128071752/http://www.tco-beamline.com/)
     - [Beamline for Schools 2017 edition](https://beamline-for-schools.web.cern.ch/editions/2017-edition)
     - [INFN article](https://web.archive.org/web/20210613061858/https://home.infn.it/it/%C2%ADit/comunicazione/com%C2%ADunicati-stampa/2336-%C2%ADbeamline-for-schools%C2%AD-studenti-di-fermo-c%C2%ADampioni-del-mondo)
+
 - period: 22/9/2016
-  title: LNF (INFN)
+  title: LNF INFN beam test experience
   image: beamline_r100.png
-  description: Performed experiments with the Cherenkov detector from the 2016 BL4S proposal on one of the Frascati INFN LINAC's beams at the BTF.
+  description: |
+    Performed experiments with the Cherenkov detector from the 2016 BL4S proposal on one of the Frascati INFN LINAC's beams at the BTF.
+
 - period: 2017
   title: '"Olimpiadi della robotica"'
   image: pack-man_r100.png
-  description: Participated with the "pac-man" project, for which I built most of the robot and all the firmware.
+  description: |
+    Participated with the "pac-man" project, for which I built most of the robot and all the firmware.
+
 - period: 2016
   title: First BL4S proposal
   image: bl4s-group_r100.png
-  description: Participated in the first group of the school project proposing a Cherenkov-effect detector for the 2016 CERN BL4S competition.
+  description: |
+    Participated in the first group of the school project proposing a Cherenkov-effect detector for the 2016 CERN Beamline for Schools competition.
