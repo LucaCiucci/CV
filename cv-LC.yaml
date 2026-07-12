@@ -1,7 +1,7 @@
 name: Luca Ciucci
 #role: Software developer & R&D
 role: Software developer focused on systems programming, static analysis and scientific software
-summary: I work on software for technically demanding domains, combining experience in C/C++ tooling, static analysis, scientific computing, 3D reconstruction, and low-level systems development.
+summary: I develop systems and developer tools for technically demanding domains, with a focus on static analysis, safety-critical C and C++ software, Rust systems programming, AI-assisted developer tooling, scientific computing, and 3D reconstruction. My work combines low-level implementation, software architecture, domain-specific analysis, and structured interfaces that make complex technical data accessible to developers, command-line tools, and language models.
 portrait: me_r300.jpg
 
 keywords:
@@ -138,16 +138,23 @@ work_experience:
     from: 2024-09-02
     to: present
   location: Pisa, Italy
-  short_description: Static analysis and developer tooling for safety-critical C and C++ software.
+  short_description: Systems and developer-tools engineer focused on static analysis and scientific software
   description: |
     I contribute to ECLAIR, BUGSENG's static analysis platform for C and C++ software, used in contexts where correctness, maintainability, and compliance with safety-critical coding standards are important.
 
-    My work involves analysis-related development, developer tooling, automation, and integration tasks across a mixed technology stack. The main focus is on C/C++ static analysis and support for coding standards such as MISRA, AUTOSAR, and CERT, while also contributing to surrounding tools, scripts, interfaces, integrations, development workflows and web components.
+    My work spans static-analysis-related development, developer tooling, automation, IDE and web integrations, and new product capabilities across a mixed technology stack. I am developing an AI integration layer for ECLAIR based on the Model Context Protocol. The system enables AI clients and local language models to query diagnostics, source code, documentation, and report data through structured tools.
+
+    The broader focus is on C and C++ static analysis and support for coding standards such as MISRA, AUTOSAR, and CERT, together with the infrastructure and workflows needed to make analysis results accessible and useful to developers.
   main_technologies:
   - title: C & C++
     desc: Core development for static analysis tooling and C/C++-oriented infrastructure.
     long_description: |
       C & C++ are central to my work on static-analysis-related tooling and infrastructure. They are also the main target languages of the analysis itself, especially in the context of safety-critical coding standards and large industrial codebases.
+
+  - title: Rust
+    desc: Systems development and prototyping for isolated developer tools, report access, command-line interfaces, and AI integrations.
+    long_description: |
+      Rust is used for building standalone tooling around ECLAIR, including command-line and protocol-based interfaces for structured access to analysis data. Its strong type system, performance, deployment model, and support for reliable systems programming make it suitable for isolated components that need to evolve rapidly without becoming tightly coupled to existing applications.
 
   - title: Prolog
     desc: Logic programming for expressing rules, constraints, and analysis knowledge.
@@ -200,6 +207,13 @@ work_experience:
   - IDE integration
   - Web interfaces
   - Technical documentation
+  - Model Context Protocol
+  - AI-assisted developer tooling
+  - Local language models
+  - Command-line interfaces
+  - Structured report querying
+  - Inter-process communication
+  - JSON-RPC
 
 - role: Research and Development
   company: Scanny3D s.r.l.
