@@ -4,12 +4,12 @@
 
 #let theme = state("theme", (
   //header-bg-color: rgb("#35414d").darken(30%),
-  header-bg-color: rgb("#35414d"),
+  header-bg-color: rgb("#0D2330"),
   //header-text-color: luma(220),
   header-text-color: luma(255),
   //header-subtext-color: luma(180),
   header-subtext-color: luma(220),
-  accent-color: rgb("#4682b4"),
+  accent-color: rgb("#337C84"),
 ))
 
 /// Gap between the header (colored block at the top) and body
@@ -190,7 +190,7 @@
           }
           #text(fill: theme.accent-color)[#if it.level == 1 { smallcaps(it.body) } else { it.body }]
           #if it.level == 1 {
-            box(width: 1fr, line(length: 100%, stroke: theme.accent-color))
+            box(width: 1fr, move(dy: -4pt, rect(width: 100%, height: 0.5pt, stroke: none, fill: gradient.linear(theme.accent-color, theme.accent-color.transparentize(80%)))))
           }
         ]
 

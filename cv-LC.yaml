@@ -1,7 +1,7 @@
 name: Luca Ciucci
 #role: Software developer & R&D
 role: Software developer focused on systems programming, static analysis and scientific software
-summary: I develop systems and developer tools for technically demanding domains, with a focus on static analysis, safety-critical C and C++ software, Rust systems programming, AI-assisted developer tooling, scientific computing, and 3D reconstruction. My work combines low-level implementation, software architecture, domain-specific analysis, and structured interfaces that make complex technical data accessible to developers, command-line tools, and language models.
+summary: I develop systems and developer tools for technically demanding domains, with a focus on static analysis, safety-critical C and C++ software, Rust systems programming, AI-integrated developer tooling, scientific computing, and 3D reconstruction. My work combines low-level implementation, software architecture, domain-specific analysis, and structured interfaces that make complex technical data accessible to developers, command-line tools, and language models.
 portrait: me_r300.jpg
 
 keywords:
@@ -14,6 +14,8 @@ keywords:
 - 3D reconstruction
 - Embedded systems
 - Developer tooling
+- AI integration
+- Model Context Protocol
 - Physics
 
 info:
@@ -72,6 +74,7 @@ interests:
     - Programming
     - Scientific computing
     - Software architecture
+    - AI-integrated developer tooling
 
   - title: Languages & tools
     description: A broad toolkit, with current emphasis on systems, static analysis, and scientific software.
@@ -92,6 +95,8 @@ interests:
       desc: technical writing, documents, and reproducible presentation material
     - title: Build systems
       desc: CMake, Make, Cargo, and project automation
+    - title: Model Context Protocol (MCP)
+      desc: production AI integrations and structured tools for language-model clients
     - title: Lua
       desc: scripting for automation and tooling contexts
     - Fortran
@@ -140,9 +145,9 @@ work_experience:
   location: Pisa, Italy
   short_description: Systems and developer-tools engineer focused on static analysis and scientific software
   description: |
-    I contribute to ECLAIR, BUGSENG's static analysis platform for C and C++ software, used in contexts where correctness, maintainability, and compliance with safety-critical coding standards are important.
+    I contribute to ECLAIR, BUGSENG's **static analysis** platform for C and C++ software, used in contexts where _correctness_, _maintainability_, and _compliance_ with **safety-critical coding standards** are important.
 
-    My work spans static-analysis-related development, developer tooling, automation, IDE and web integrations, and new product capabilities across a mixed technology stack. I am developing an AI integration layer for ECLAIR based on the Model Context Protocol. The system enables AI clients and local language models to query diagnostics, source code, documentation, and report data through structured tools.
+    My work spans static-analysis-related development, developer tooling, automation, IDE and web integrations, and new product capabilities across a mixed technology stack. One recent project was a production Model Context Protocol (MCP) integration for ECLAIR, which I designed and delivered from prototype to release in roughly two weeks of part-time work. It enables AI clients and local language models to query diagnostics, source code, documentation, and report data through structured tools; I built the Rust implementation and end-to-end protocol tests.
 
     The broader focus is on C and C++ static analysis and support for coding standards such as MISRA, AUTOSAR, and CERT, together with the infrastructure and workflows needed to make analysis results accessible and useful to developers.
   main_technologies:
@@ -155,6 +160,11 @@ work_experience:
     desc: Systems development and prototyping for isolated developer tools, report access, command-line interfaces, and AI integrations.
     long_description: |
       Rust is used for building standalone tooling around ECLAIR, including command-line and protocol-based interfaces for structured access to analysis data. Its strong type system, performance, deployment model, and support for reliable systems programming make it suitable for isolated components that need to evolve rapidly without becoming tightly coupled to existing applications.
+
+  - title: Model Context Protocol (MCP)
+    desc: Production MCP integration connecting language-model clients to static-analysis results through structured tools.
+    long_description: |
+      I designed and implemented ECLAIR's MCP integration in Rust, from an early prototype to release. It provides AI clients with structured access to static-analysis databases, source excerpts, manuals, and external project documents. The implementation includes protocol-level fixture tests and a distributable self-test harness.
 
   - title: Prolog
     desc: Logic programming for expressing rules, constraints, and analysis knowledge.
@@ -209,6 +219,7 @@ work_experience:
   - Technical documentation
   - Model Context Protocol
   - AI-assisted developer tooling
+  - MCP server development
   - Local language models
   - Command-line interfaces
   - Structured report querying

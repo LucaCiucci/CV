@@ -94,7 +94,7 @@
       line(
         pa,
         pb,
-        stroke: 1.0pt + rgb("#b9228c").transparentize(50%).transparentize(100% * pc.at(0) / w),
+        stroke: 1.0pt + rgb("#299db17a").transparentize(50%).transparentize(100% * pc.at(0) / w * 2),
       )
     }
 

@@ -51,9 +51,18 @@
 
   #render(cv.summary)
 
+  #[
+    #set text(size: 0.8em)
+    Read more at #link(cv.info.website + "/cv")
+  ]
+
   = Interests
 
   #for group in cv.interests.groups [
+    // HACK
+    #if lower(group.title) == "core interests" {
+      continue
+    }
     - #group.title
   ]
 
@@ -124,6 +133,49 @@
   },
 )
 
+#let normalize_interest_item(item) = if type(item) == str {
+  (title: item, desc: none)
+} else {
+  item
+}
+
+#let item-box(item) = context {
+  let item = normalize_interest_item(item)
+
+  box(
+    stroke: theme.final().accent-color,
+    inset: (
+      left: 0.5em,
+      right: 0.5em,
+      top: 0.25em,
+      bottom: 0.25em,
+    ),
+    radius: 0.5em,
+    {
+      item.title
+      if item.desc != none {
+        place(
+          box(
+            width: 5em,
+            text(
+              size: 0.1em,
+              fill: black.transparentize(100%),
+              [
+                #item.desc
+
+                #if "long_description" in item {
+                  item.long_description
+                }
+              ]
+            ),
+          )
+        )
+      }
+    }
+  )
+  h(0.25em)
+}
+
 = Work Experience
 
 #for entry in cv.work_experience [
@@ -132,6 +184,16 @@
   ]
 
   #render(entry.description)
+
+  #for e in entry.main_technologies {
+    item-box(e)
+  }
+
+  //#if "additional_technologies" in entry {
+  //  place(
+//
+  //  )
+  //}
 ]
 
 = Publications & Contributions
