@@ -226,13 +226,17 @@ work_experience:
   - Inter-process communication
   - JSON-RPC
 
-- role: Research and Development
+- role: R&D (part-time / project-based)
   company: Scanny3D s.r.l.
+  period:
+    from: "2018"
+    to: "2024"
+  location: Italy
   short_description: Software and algorithm development for 3D reconstruction.
   description: |
-    Worked on software and algorithms for 3D scanning & reconstruction, combining programming with practical work on cameras, projectors, electronics, mechanics, calibration, and 3D printing.
+    Contributed to software and algorithm development for 3D scanning and reconstruction, combining acquisition workflows, calibration, reconstruction algorithms, and practical hardware integration with cameras, projectors, electronics, mechanics, and 3D printing.
 
-    The work involved both experimental prototyping and practical engineering, from acquisition workflows and reconstruction algorithms to hardware integration.
+    The work involved both experimental prototyping and practical engineering.
   main_technologies:
   - title: C++
     desc: Application and algorithm development for core algorithms and application logic, including some legacy codebases.
@@ -244,10 +248,10 @@ work_experience:
 
 education:
 #- period: 17/09/2018 - present
-- period: 2018 - present
+- period: 2018 - 2024
   title: University of Pisa
   description: |
-    Physics studies at the University of Pisa, with current focus on theoretical physics, quantum field theory, lattice field theory, numerical methods, and scientific computing.
+    Physics studies at the University of Pisa, focused on theoretical physics, quantum field theory, lattice field theory, numerical methods, and scientific computing.
 
 - period: 17/7/2017 - 21/7/2017
   title: Ducati "Fisica in moto" summer school

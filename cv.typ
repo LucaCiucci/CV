@@ -17,6 +17,9 @@
         stroke: (right: 1pt + theme.final().accent-color),
         align(right, text(size: 0.8em)[
           #entry.period
+          #if "location" in entry {
+            [#entry.location]
+          }
           #if "image" in entry {
             image(
               "img/" + entry.image,
@@ -176,7 +179,7 @@
   h(0.25em)
 }
 
-= Work Experience
+= Professional Experience
 
 #for entry in cv.work_experience [
   == #entry.role \@ #entry.company #if "period" in entry [
