@@ -127,6 +127,9 @@
 
 #list(
   ..for group in cv.interests.groups {
+    if "minor" in group and group.minor {
+      continue
+    }
     (list.item[
       *#group.title*: #render(group.description)
       #if "items" in group [
@@ -156,7 +159,7 @@
     radius: 0.5em,
     {
       item.title
-      if item.desc != none {
+      if (item.desc != none) and false {
         place(
           box(
             width: 5em,

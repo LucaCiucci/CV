@@ -1,7 +1,8 @@
 name: Luca Ciucci
 #role: Software developer & R&D
-role: Software developer focused on systems programming, static analysis and scientific software
-summary: I develop systems and developer tools for technically demanding domains, with a focus on static analysis, safety-critical C and C++ software, Rust systems programming, AI-integrated developer tooling, scientific computing, and 3D reconstruction. My work combines low-level implementation, software architecture, domain-specific analysis, and structured interfaces that make complex technical data accessible to developers, command-line tools, and language models.
+role: Systems and developer-tooling engineer focused on systems programming, static analysis and scientific software
+summary: I build systems and developer tools for technically demanding domains, working comfortably across abstraction layers from low-level C/C++ and Rust integration to static analysis, language tooling, developer interfaces, scientific software, 3D reconstruction and computational metrology. I have a strong track record of turning architectural ideas into working prototypes and production-oriented tools, with particular experience in C++/Rust/Linux systems programming, safety-critical software, compiler and analysis tooling, and AI-integrated developer workflows.
+
 portrait: me_r300.jpg
 
 keywords:
@@ -108,11 +109,13 @@ interests:
     - PIC Basic
 
   - title: Systems
-    description: Software close to the machine, from desktop applications to constrained devices.
+    description: Software close to the machine, from Linux systems and desktop applications to constrained devices.
     items:
+    - Linux
+    - Systems programming
     - Desktop applications
-    - Microcontrollers
     - Embedded systems
+    - Microcontrollers
     - Inter-process communication
     - Developer tooling
 
@@ -134,6 +137,7 @@ interests:
     description: Basic practical knowledge, mainly working with prebuilt boards, sensors, cameras, and embedded components.
 
   - title: Mechanics
+    minor: true
     description: Practical experience with manual tools, CNC machines, `G-code`, `CAM`, and 3D printing.
 
 work_experience:
@@ -143,68 +147,75 @@ work_experience:
     from: 2024-09-02
     to: present
   location: Pisa, Italy
-  short_description: Systems and developer-tools engineer focused on static analysis and scientific software
+
+  short_description: Systems and developer-tooling engineer working on static analysis, language tooling, and safety-critical software.
+
   description: |
-    I contribute to ECLAIR, BUGSENG's **static analysis** platform for C and C++ software, used in contexts where _correctness_, _maintainability_, and _compliance_ with **safety-critical coding standards** are important.
+    I develop systems and developer tooling around ECLAIR, BUGSENG's static-analysis platform for C and C++ software, with a focus on safety-critical development, coding-standard compliance, and making complex analysis results accessible to developers.
 
-    My work spans static-analysis-related development, developer tooling, automation, IDE and web integrations, and new product capabilities across a mixed technology stack. One recent project was a production Model Context Protocol (MCP) integration for ECLAIR, which I designed and delivered from prototype to release in roughly two weeks of part-time work. It enables AI clients and local language models to query diagnostics, source code, documentation, and report data through structured tools; I built the Rust implementation and end-to-end protocol tests.
+    My work spans multiple layers of the product, including static-analysis infrastructure, language and IDE tooling, command-line interfaces, automation, build and release integration, qualification material, and experimental product capabilities. I regularly prototype new approaches, evaluate them on realistic use cases, and carry successful ideas toward production-quality implementations.
 
-    The broader focus is on C and C++ static analysis and support for coding standards such as MISRA, AUTOSAR, and CERT, together with the infrastructure and workflows needed to make analysis results accessible and useful to developers.
+    A recent example is ECLAIR's Model Context Protocol (MCP) integration, which I designed and implemented from prototype to an internally release-ready system in roughly two weeks of part-time development. The server exposes large analysis databases and technical documentation to AI clients through structured tools and progressive querying rather than unbounded context dumps. The work included the Rust implementation, query and pagination architecture, documentation search, licensing integration, diagnostics, Windows/Linux/MacOS support, protocol-level fixtures, and a distributable self-test harness.
+
+    I have also worked on language tooling, IDE integrations, static-analysis checks and infrastructure, qualification workflows, and architectural prototypes across a mixed C++, Rust, Prolog, Python, JavaScript, and Java codebase.
+
   main_technologies:
   - title: C & C++
-    desc: Core development for static analysis tooling and C/C++-oriented infrastructure.
+    desc: Core development and integration work around ECLAIR and C/C++ static-analysis infrastructure.
     long_description: |
-      C & C++ are central to my work on static-analysis-related tooling and infrastructure. They are also the main target languages of the analysis itself, especially in the context of safety-critical coding standards and large industrial codebases.
+      C and C++ are central both to ECLAIR's implementation and to the software it analyzes. My work includes product development, integration work, build and platform issues, and tooling around large industrial C and C++ codebases, particularly in safety-critical and standards-driven environments.
 
   - title: Rust
-    desc: Systems development and prototyping for isolated developer tools, report access, command-line interfaces, and AI integrations.
+    desc: Systems and developer-tooling development, including command-line tools, protocol servers, data access, and architectural prototypes.
     long_description: |
-      Rust is used for building standalone tooling around ECLAIR, including command-line and protocol-based interfaces for structured access to analysis data. Its strong type system, performance, deployment model, and support for reliable systems programming make it suitable for isolated components that need to evolve rapidly without becoming tightly coupled to existing applications.
+      I use Rust for standalone systems and developer-tooling components where strong typing, reliability, and rapid iteration are particularly valuable. My professional Rust work includes protocol servers, command-line interfaces, structured access to analysis data, build and platform integration, testing infrastructure, and interoperability with existing C and C++ code.
 
   - title: Model Context Protocol (MCP)
-    desc: Production MCP integration connecting language-model clients to static-analysis results through structured tools.
+    desc: Designed and implemented ECLAIR's production-oriented MCP integration for AI-assisted static-analysis workflows.
     long_description: |
-      I designed and implemented ECLAIR's MCP integration in Rust, from an early prototype to release. It provides AI clients with structured access to static-analysis databases, source excerpts, manuals, and external project documents. The implementation includes protocol-level fixture tests and a distributable self-test harness.
+      I designed the architecture and implemented ECLAIR's MCP server in Rust. It allows AI clients to progressively navigate static-analysis databases, diagnostics, source excerpts, manuals, and project documentation through structured tools.
 
-  - title: Prolog
-    desc: Logic programming for expressing rules, constraints, and analysis knowledge.
-    long_description: |
-      Prolog is useful for representing declarative relationships, rules, and constraints. In a static analysis context, this style is valuable because many checks can be naturally described in terms of facts, relations, and logical conditions.
+      The design is intended to work with large analyses without exposing entire databases to the model at once. It includes filtering and grouping primitives, bounded pagination, documentation search, protocol-level fixture tests, licensing integration, diagnostics, and a self-contained validation harness.
 
   - title: Static analysis
-    desc: Analysis of source code to detect defects, enforce rules, and support compliance.
+    desc: Development of tooling and infrastructure for analyzing C and C++ software without executing it.
     long_description: |
-      Static analysis is the main technical domain of my current professional work. It combines programming language knowledge, software engineering, formal reasoning, and practical tooling to inspect programs without executing them.
+      Static analysis is the main technical domain of my professional work. I work with tooling that combines programming-language knowledge, program analysis, rule-based reasoning, diagnostics, and developer workflows to detect defects and support compliance in large C and C++ projects.
 
   - title: Safety-critical standards
-    desc: MISRA, CERT, AUTOSAR, and related rule-based software quality requirements.
+    desc: Tooling and workflows supporting MISRA, CERT, AUTOSAR, and related C/C++ coding standards.
     long_description: |
-      Safety-critical coding standards define restrictions and guidelines intended to improve reliability, portability, maintainability, and analyzability of software. My work is connected to tooling that supports these standards for C and C++ projects.
+      Much of my work is connected to software developed under strict coding standards and qualification requirements. This includes tooling for standards such as MISRA C, MISRA C++, CERT C/C++, and AUTOSAR C++14, together with the infrastructure required to make findings understandable, reviewable, and usable in engineering workflows.
+
+  - title: Prolog
+    desc: Declarative implementation of analysis logic, rules, constraints, and relationships.
+    long_description: |
+      I use Prolog in parts of the static-analysis stack where rules and relationships can be expressed naturally in declarative form. This includes working with analysis knowledge, configuration, and rule-oriented logic.
 
   - title: Python
-    desc: Scripting, automation, data processing, and small development tools.
+    desc: Automation, scripting, experiments, data processing, and development support.
     long_description: |
-      Python is useful for automation, glue code, experiments, data processing, and small internal tools around larger software systems.
+      I use Python for automation, glue code, experiments, data transformation, and small internal tools around larger systems.
 
   - title: Lua
-    desc: Scripting and automation in tooling contexts.
+    desc: Embedded scripting and automation for developer tooling.
     long_description: |
-      Lua is a lightweight scripting language that can be useful in tooling, configuration, and automation contexts. It is used in specific tools where embedding a small scripting engine and a reduced runtime requirements is beneficial for flexibility and extensibility.
+      I have worked with Lua in tooling contexts where a lightweight embedded scripting environment is useful for configuration, automation, or extensibility.
 
   - title: JavaScript
-    desc: Frontend and web-related development around developer tools.
+    desc: Web and developer-facing interfaces around analysis tooling.
     long_description: |
-      JavaScript and related web technologies are useful for building interfaces, documentation, dashboards, and developer-facing tools.
+      I use JavaScript and related web technologies for developer-facing interfaces, integrations, documentation, and tooling around ECLAIR.
 
   - title: Java
-    desc: IDE-related tooling and integration work.
+    desc: IDE and development-environment integration.
     long_description: |
-      Java is relevant for tooling and integration work, especially in contexts involving IDE plugins and development environments. I only occasionally work with Java in this context, but it is part of the technology stack for certain integrations.
+      I have used Java for IDE-related integration work and developer tooling, particularly where integration with existing Java-based development environments is required.
 
   - title: Docker
-    desc: Containerization and deployment.
+    desc: Reproducible build, testing, release, and deployment environments.
     long_description: |
-      Docker is used to create reproducible environments, CI/CD pipelines, and other deployment workflows.
+      I use Docker in build and release workflows, reproducible development environments, CI-related tasks, and cross-platform packaging and integration work.
 
   additional_technologies:
   - MISRA C
@@ -213,38 +224,58 @@ work_experience:
   - CERT C++
   - AUTOSAR C++14
   - Developer tooling
-  - Automation
+  - Language tooling
+  - Static analysis
+  - Safety-critical software
   - IDE integration
-  - Web interfaces
-  - Technical documentation
+  - Language Server Protocol
   - Model Context Protocol
   - AI-assisted developer tooling
-  - MCP server development
-  - Local language models
   - Command-line interfaces
   - Structured report querying
-  - Inter-process communication
   - JSON-RPC
+  - Inter-process communication
+  - Build and release tooling
+  - Technical documentation
+  - Automation
 
-- role: R&D (part-time / project-based)
+# role: R&D (part-time / project-based)
+- role: R&D (Software and Algorithms)
   company: Scanny3D s.r.l.
   period:
     from: "2018"
     to: "2024"
   location: Italy
-  short_description: Software and algorithm development for 3D reconstruction.
-  description: |
-    Contributed to software and algorithm development for 3D scanning and reconstruction, combining acquisition workflows, calibration, reconstruction algorithms, and practical hardware integration with cameras, projectors, electronics, mechanics, and 3D printing.
 
-    The work involved both experimental prototyping and practical engineering.
+  short_description: Software, algorithms, and hardware integration for structured-light 3D scanning and reconstruction.
+
+  description: |
+    Contributed to research and development of structured-light 3D scanning systems, combining computer vision, numerical algorithms, acquisition software, calibration, and practical hardware integration.
+
+    My work spanned the full reconstruction pipeline, from camera/projector acquisition and calibration to point-cloud generation and 3D reconstruction, together with experimental work involving cameras, projectors, electronics, mechanics, and 3D printing.
+
+    This experience introduced me early to engineering problems that cross the boundary between software, mathematical algorithms, physical measurement, and real-world hardware.
+
   main_technologies:
   - title: C++
-    desc: Application and algorithm development for core algorithms and application logic, including some legacy codebases.
-  - 3D reconstruction
+    desc: Core application and algorithm development for acquisition, calibration, and 3D reconstruction.
+    long_description: |
+      Used C++ for performance-sensitive application logic and reconstruction algorithms, including work with existing and legacy codebases.
+
+  - title: 3D reconstruction
+    desc: Geometric reconstruction from image-based measurements and structured-light acquisition.
+    long_description: |
+      Worked on algorithms and workflows for recovering three-dimensional geometry from structured-light measurements, including calibration, point-cloud processing, and surface reconstruction.
+
   - title: Computer vision
     desc: Image processing and measurement-oriented vision algorithms.
+    long_description: |
+      Developed and experimented with computer-vision techniques used for camera/projector calibration, structured-light decoding, geometric measurement, and reconstruction.
+
   - title: Hardware integration
-    desc: Practical work with electronics, cameras, projectors, mechanics, and 3D printing.
+    desc: Integration of software with cameras, projectors, electronics, mechanics, and custom scanning hardware.
+    long_description: |
+      Worked directly with the physical side of scanning systems, integrating software with cameras, projectors, electronics, mechanical components, and prototyped hardware.
 
 education:
 #- period: 17/09/2018 - present

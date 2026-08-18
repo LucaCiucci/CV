@@ -101,12 +101,13 @@
           dy: 1.5em,
           dx: - page.margin.left,
           //image("bg-1.png", width: 100% + page.margin.left + page.margin.right, height: auto, fit: "cover"),
-          bg-graphic(w: page.width + 2pt, h: 4cm)
+          bg-graphic(w: page.width + 2pt, h: 5.0cm)
         )
 
         block(inset: (left: 2cm), width: 100%, {
           set par(spacing: 0em)
           set align(center)
+          v(-0.5em)
           {
             set text(fill: theme.header-text-color)
             //set text(font: "Liberation Sans")
@@ -119,7 +120,7 @@
           //set text(font: "DejaVu Sans")
           set text(fill: theme.header-subtext-color, weight: "bold")
           set text(size: 1.125em)
-          rect(stroke: none, width: 75%, position.map(it => smallcaps(it)).join([ #sym.and ]))
+          rect(stroke: none, width: 80%, inset: (left: 1em), position.map(it => smallcaps(it)).join([ #sym.and ]))
           set text(size: 0.9em)
           //rect(stroke: none)[
           //  #emoji.phone.receiver #link("tel:" + cv-data.info.phone.replace(" ", ""), cv-data.info.phone)
